@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choco Haven Cafe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Task 8: Status banner element directly under main heading -->
+    <h1>Choco Haven Cafe</h1>
+    <p id="status-banner" style="font-weight: bold;"></p>
+
+    <!-- Task 3: Theme Toggle Button -->
+    <button id="theme-toggle" type="button" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Toggle Light/Dark Mode</button>
+
+    <nav style="margin-top: 15px;">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Task 6: Article section with Read More toggle -->
+    <section class="hero">
+      <img src="chocohaven.png" alt="Delicious hot chocolate and brownie">
+      <h2>Welcome to Chocolate Paradise!</h2>
+      <article>
+        <p>We serve the richest handcrafted cocoa drinks and freshly baked chocolate treats.</p>
+        <p id="extra-content" style="display: none;">Our journey started in 2020 with a single goal: sourcing 100% organic fair-trade cocoa from ethical farms to craft pure chocolate joy in every sip and bite!</p>
+        <button id="read-more-btn" type="button">Read More</button>
+      </article>
+    </section>
+
+    <!-- Task 4 & Task 7: Category Filter Buttons and Interactive Order Total -->
+    <section id="menu">
+      <h2>Our Top Favorites</h2>
+
+      <!-- Task 7 Filter Buttons -->
+      <div style="margin-bottom: 15px;">
+        <button class="filter-btn" data-category="All">All</button>
+        <button class="filter-btn" data-category="Drinks">Drinks</button>
+        <button class="filter-btn" data-category="Pastries">Pastries</button>
+      </div>
+
+      <div class="card-container">
+        <!-- Task 4 Checkboxes attached to menu items -->
+        <div class="card menu-item Drinks">
+          <h3>
+            <input type="checkbox" class="menu-item-checkbox" value="5.50"> Dark Hot Cocoa - $5.50
+          </h3>
+          <p>Rich 70% dark chocolate melted into warm milk.</p>
+        </div>
+
+        <div class="card menu-item Pastries">
+          <h3>
+            <input type="checkbox" class="menu-item-checkbox" value="6.00"> Fudge Brownie - $6.00
+          </h3>
+          <p>Chewy chocolate brownie served warm with syrup.</p>
+        </div>
+
+        <div class="card menu-item Pastries">
+          <h3>
+            <input type="checkbox" class="menu-item-checkbox" value="4.50"> Choco Muffin - $4.50
+          </h3>
+          <p>Soft cocoa muffin packed with double chocolate chips.</p>
+        </div>
+      </div>
+
+      <!-- Task 4 Dynamic Total Output -->
+      <h3 style="margin-top: 20px;">Order Total: <span id="total">$0.00</span></h3>
+    </section>
+
+    <section>
+      <h2>Why Choose Us?</h2>
+      <ol type="A">
+        <li>100% Organic Fair-Trade Cocoa</li>
+        <li>Freshly Baked Daily</li>
+        <li>Cozy Warm Atmosphere</li>
+      </ol>
+    </section>
+
+    <!-- Task 2: Table Section -->
+    <section id="hours">
+      <h2>Opening Hours & Prices</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Details / Timing</th>
+            <th>Price Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hot Drinks</td>
+            <td>Mon - Sun (8 AM - 8 PM)</td>
+            <td>$4 - $7</td>
+          </tr>
+          <tr>
+            <td>Desserts</td>
+            <td>Mon - Sun (10 AM - 10 PM)</td>
+            <td>$5 - $10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Task 1, 5, and 9: Form Section with Age Verification and Character Counter -->
+    <section id="order">
+      <h2>Place a Quick Order</h2>
+      <form id="order-form">
+        <!-- Task 1 Form Inputs -->
+        <label for="username">Your Name:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Task 5 Birth Year Field -->
+        <label for="birth-year">Birth Year (for Age Verification):</label><br>
+        <input type="text" id="birth-year" placeholder="e.g., 2002"><br>
+        <p id="discount-message" style="color: #8b5a2b; font-weight: bold;"></p><br>
+
+        <p>Select Pickup Option:</p>
+        <input type="radio" id="dine-in" name="pickup" value="dine-in">
+        <label for="dine-in">Dine-In</label><br>
+        <input type="radio" id="takeout" name="pickup" value="takeout">
+        <label for="takeout">Takeout</label><br><br>
+
+        <!-- Task 9 Character Counter Textarea -->
+        <label for="special-notes">Special Order Instructions:</label><br>
+        <textarea id="special-notes" maxlength="100" rows="3" style="width: 100%; max-width: 400px;"></textarea><br>
+        <small id="char-count">100 characters remaining</small><br><br>
+
+        <button type="submit">Submit Order</button>
+      </form>
+
+      <!-- Task 1 Response Message Display -->
+      <p id="form-message" style="font-weight: bold; margin-top: 15px; color: #4a2c2a;"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Contact us: <a href="mailto:info@chocohaven.com">info@chocohaven.com</a></p>
+    <p>&copy; 2026 Choco Haven Cafe</p>
+  </footer>
+
+  <!-- Link external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
